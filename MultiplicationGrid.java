@@ -7,13 +7,18 @@ public class MultiplicationGrid
     {
         int row;
         int column;
-        for (row = 0; row <= size; ++row)
+        for (column = 0; column <= size; column++)
         {   
-            for (column = 0; column <= size; ++column)
+            System.out.print(column);
+            for (row = 0; row <= size; row++)
             {
+                //System.out.println(row);
+                //System.out.println();
                 System.out.printf("%4d",row*column);
+
             }
             System.out.println();
+
         }
     }    
     public static void main(String[] args)
@@ -29,16 +34,18 @@ public class MultiplicationGrid
             size = keyboard.nextInt();
         }      
         boolean multiply = true;
-        while (multiply == true)
+
+        do
         {
             multiply(size);
-            if (size >= size)
-            {    
+            if (size <= size)
+            { 
                 multiply = false;
-            }    
+            
             }
-        }
+        }while (multiply == true);
     }
+}    
     
     
       
