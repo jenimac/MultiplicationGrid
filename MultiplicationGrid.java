@@ -5,16 +5,23 @@ public class MultiplicationGrid
 {   
     public static void multiply(int size)
     {
+        int header;
+        for(header = 0; header <=size; header ++)
+        {
+            System.out.print("    " + header);
+            System.out.print("");
+        }    
+        
         int row;
         int column;
         for (column = 0; column <= size; column++)
         {   
-            System.out.print(column);
+            System.out.print("\n" + column);
             for (row = 0; row <= size; row++)
             {
                 //System.out.println(row);
                 //System.out.println();
-                System.out.printf("%4d",row*column);
+                System.out.printf("%5d",row*column);
 
             }
             System.out.println();
